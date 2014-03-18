@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+# To call this script, make sure make_ext4fs is somewhere in PATH
+
+mkbootimg --cmdline 'console=ttyDDC0 androidboot.hardware=runnymede' --kernel zImage --ramdisk 1.28.cpio.gz --board 'runnymede' --base 0x14400000 -o boot.img
+
+read -p "made a boot image from zImage + 1.28.cpio.gz"
+
